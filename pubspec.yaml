@@ -1,6 +1,6 @@
 name: localizely_sdk
 description: Localizely SDK for Flutter enables Over-the-air translations update from Localizely cloud platform
-version: 2.5.1
+version: 2.5.2
 homepage: https://localizely.com/flutter-over-the-air/
 
 environment:
