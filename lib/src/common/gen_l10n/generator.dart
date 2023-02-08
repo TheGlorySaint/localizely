@@ -38,8 +38,8 @@
 
 import 'dart:io';
 
-import 'package:yaml/yaml.dart' as yaml;
 import 'package:path/path.dart' as path;
+import 'package:yaml/yaml.dart' as yaml;
 
 import 'gen_l10n_types.dart';
 
@@ -143,7 +143,7 @@ String generateLyLocalizationsContents(
 }
 
 Map<String, Object> _generateMetadata(Message message) {
-  Map<String, Object> _combine(
+  Map<String, Object> combine(
           Map<String, Object> acc, Map<String, Object> curr) =>
       ({...acc, ...curr});
 
@@ -171,7 +171,7 @@ Map<String, Object> _generateMetadata(Message message) {
                                                 ? '"${optionalParameter.value}"'
                                                 : '${optionalParameter.value}'
                                       }))
-                                  .fold(<String, Object>{}, _combine)
+                                  .fold(<String, Object>{}, combine)
                             }
                           }
                         : {}),
@@ -180,7 +180,7 @@ Map<String, Object> _generateMetadata(Message message) {
                         : {})
                   }
                 }))
-            .fold(<String, Object>{}, _combine)
+            .fold(<String, Object>{}, combine)
       }
     }
   };

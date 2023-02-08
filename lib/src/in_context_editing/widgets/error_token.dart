@@ -23,7 +23,7 @@ class ErrorToken extends StatelessWidget {
             child: Text(
               'Your authentication token is invalid or has expired',
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyText2,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
           ),
           Container(

@@ -23,7 +23,7 @@ class ErrorUnknown extends StatelessWidget {
             child: Text(
               'Unknown error occurred',
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyText2,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
           ),
           Container(

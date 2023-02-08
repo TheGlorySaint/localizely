@@ -1,23 +1,22 @@
 import 'dart:async' show Timer;
 
 import 'package:flutter/material.dart';
-
 // ignore_for_file:implementation_imports
 import 'package:intl/src/intl_helpers.dart';
 
+import '../../common/util/util.dart';
+import '../../sdk_data.dart';
+import '../api/api.dart';
+import '../model/in_context_editing_data.dart';
+import '../model/translation_change_typed.dart';
+import '../proxy/in_context_editing_proxy.dart';
 import 'app.dart';
 import 'auth.dart';
+import 'error_token.dart';
+import 'error_unknown.dart';
 import 'intro.dart';
 import 'loading.dart';
 import 'success.dart';
-import 'error_token.dart';
-import 'error_unknown.dart';
-import '../api/api.dart';
-import '../proxy/in_context_editing_proxy.dart';
-import '../model/translation_change_typed.dart';
-import '../model/in_context_editing_data.dart';
-import '../../sdk_data.dart';
-import '../../common/util/util.dart';
 
 enum InContextEditingPhase {
   intro,
@@ -39,11 +38,11 @@ class LocalizelyInContextEditing extends StatefulWidget {
       : super(key: key);
 
   @override
-  _LocalizelyInContextEditingState createState() =>
-      _LocalizelyInContextEditingState();
+  LocalizelyInContextEditingState createState() =>
+      LocalizelyInContextEditingState();
 }
 
-class _LocalizelyInContextEditingState
+class LocalizelyInContextEditingState
     extends State<LocalizelyInContextEditing> {
   InContextEditingPhase _inContextEditingPhase = InContextEditingPhase.intro;
   Timer? _timer;

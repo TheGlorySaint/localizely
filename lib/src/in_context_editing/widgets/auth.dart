@@ -6,10 +6,10 @@ class Auth extends StatefulWidget {
   Auth({Key? key, required this.onSubmit}) : super(key: key);
 
   @override
-  _AuthState createState() => _AuthState();
+  AuthState createState() => AuthState();
 }
 
-class _AuthState extends State<Auth> {
+class AuthState extends State<Auth> {
   final _tokenController = TextEditingController();
 
   _handleConnectClick() {
@@ -34,7 +34,7 @@ class _AuthState extends State<Auth> {
             margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
             child: Text(
               'Enter the token from Localizely',
-              style: Theme.of(context).textTheme.bodyText2,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
           ),
           Container(

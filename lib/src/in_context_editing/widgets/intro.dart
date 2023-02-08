@@ -37,7 +37,7 @@ class Intro extends StatelessWidget {
             child: Text(
               'In-Context Editing',
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline1,
+              style: Theme.of(context).textTheme.displayLarge,
             ),
           ),
           Container(
@@ -45,7 +45,7 @@ class Intro extends StatelessWidget {
               child: Text(
                 'Enter the token from Localizely and start translating the texts in the app',
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context).textTheme.bodyMedium,
               )),
           Container(
             margin: EdgeInsets.only(top: 50),

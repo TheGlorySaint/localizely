@@ -1,12 +1,12 @@
 import 'dart:convert' as convert;
 
 import 'package:intl/intl.dart';
-import 'package:package_info/package_info.dart';
 import 'package:logger/logger.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
-import '../platform/platform.dart';
-import '../../sdk_data.dart';
 import '../../../localizely_sdk.dart';
+import '../../sdk_data.dart';
+import '../platform/platform.dart';
 
 enum CodeGenerator { flutterIntl, genL10n }
 
@@ -55,8 +55,7 @@ class Util {
 
     if (semanticVersionRegExp.hasMatch(value)) {
       var segments = value.split('.');
-      var exceededSegments =
-          segments.where((segment) => int.parse(segment) > maxSegmentValue);
+      var exceededSegments = segments.where((segment) => int.parse(segment) > maxSegmentValue);
 
       return exceededSegments.isEmpty;
     }
@@ -84,8 +83,6 @@ class Util {
       return '';
     }
 
-    return codeGenerator == CodeGenerator.genL10n
-        ? LocalizelyGenL10n.getCurrentLocale()!
-        : Intl.getCurrentLocale();
+    return codeGenerator == CodeGenerator.genL10n ? LocalizelyGenL10n.getCurrentLocale()! : Intl.getCurrentLocale();
   }
 }
